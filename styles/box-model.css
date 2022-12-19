@@ -1,5 +1,26 @@
-.box {
-  background-color: gold;
-  margin: 100px;
+*{
+  box-sizing: border-box;
+}
+
+.box1 {
+  width: 400px;
+}
+
+.test1 {
+  background-color: red;
+  width: auto;  
+  border: 10px solid black;
+  padding : 0 10px;
+  margin: 0 10px;
+}
+
+.box2 {
+  width: 400px;
+}
+
+.test2 {
+  background-color: yellow;
   width: 100%;
+  border: 10px solid black;
+  padding : 0 10px;
 }
