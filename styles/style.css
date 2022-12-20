@@ -230,7 +230,6 @@ input[type="search"] {
 .board__item{
   display: flex;
   flex-flow: row nowrap;
-  background-color: pink;
 }
 
 .board__link{
@@ -245,7 +244,6 @@ input[type="search"] {
   flex: 0 0 auto;
   width: 6.25em;
   text-align: right;
-  background-color: skyblue;
 }
 
 .board__more{
@@ -255,15 +253,24 @@ input[type="search"] {
 
 /* 공통 인기 사이트 */
 .favorite {
-  /* background: skyblue; */
   grid-area: favorite;
 }
 
 /* 공통 트위터 */
 .twitter {
-  /* background: burlywood; */
+  background: burlywood;
   grid-area: twitter;
 }
+
+.twitter__title{}
+.twitter__container{}
+.twitter__userInfo{}
+.twitter__userName{}
+.twitter__userId{}
+.twitter__userProfile{}
+.twitter__userProfileImage{}
+.twitter__summary{}
+.twitter__date{}
 
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
@@ -382,6 +389,18 @@ input[type="search"] {
       "board"
       "favorite"
       "twitter";
+  }
+
+  /* 모바일 인기 사이트 */
+  .favorite__item{
+    margin-top: var(--spacing-sm);
+  }
+
+  .favorite__link::after{
+    content: attr(data-tooltip);
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
+    margin-left: var(--spacing-xs);
   }
 }
 
